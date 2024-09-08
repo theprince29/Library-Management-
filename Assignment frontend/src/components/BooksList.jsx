@@ -4,7 +4,6 @@ import axios from "axios";
 
 const fetchBooks = async () => {
   const baseUri = import.meta.env.VITE_BASE_BACKEND_URI;
-  console.log(baseUri)
   const { data } = await axios.get(`${baseUri}/api/books`);
   return data;
 };
