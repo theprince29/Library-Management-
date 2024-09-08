@@ -24,15 +24,15 @@ const connectDB = async (): Promise<void> => {
 
 connectDB(); 
 // Configure CORS options
-const corsOptions = {
-  origin: process.env.CORS_ORIGIN, 
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: false, 
-  optionsSuccessStatus: 204
-};
+// const corsOptions = {
+//   origin: process.env.CORS_ORIGIN, 
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: false, 
+//   optionsSuccessStatus: 204
+// };
 
 // Use CORS middleware
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use('/api',bookRoute);
 app.use('/api/transactions',transactionRoute);
